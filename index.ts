@@ -4,6 +4,7 @@ import 'express-async-errors';
 import * as methodOverride from 'method-override';
 import {engine} from 'express-handlebars';
 import {handleError} from "./utils/error";
+import {mainRouter} from "./routers/main";
 
 const app = express();
 
@@ -18,6 +19,8 @@ app.engine('.hbs', engine({
 app.set('view engine', '.hbs');
 
 app.use(handleError);
+
+app.use('/', (mainRouter))
 
 
 app.listen(3000, 'localhost', () => {
