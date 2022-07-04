@@ -1,1 +1,39 @@
 you are editing task
+
+<br>
+
+<form method="POST" action="/task/update/{{task.id}}?_method=PUT">
+    Task name:
+    <br>
+    <input type="text"
+           name="task"
+           minlength="3"
+           maxlength="300"
+           required value="{{task.task}}">
+    <br>
+    <label>
+        Select priority:
+        <br>
+        <select name="priority" id="">
+            <option value="{{task.priority}}">{{task.priority}}</option>
+            {{#each priority}}
+                <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+    </label>
+
+    <label>
+        Select priority:
+        <br>
+        <select name="status" id="">
+            <option value="{{task.status}}">{{task.status}}</option>
+
+            {{#each status}}
+                <option value="{{../task.status}}">{{this}}</option>
+            {{/each}}
+        </select>
+    </label>
+
+    <button type="submit">Add</button>
+
+</form>

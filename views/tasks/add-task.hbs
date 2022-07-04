@@ -1,0 +1,24 @@
+<h3>Add another task</h3>
+
+
+<form action="/task/add" method="post">
+    <label for="">
+        Task name:
+        <br>
+        <input type="text" name="task" minlength="3" maxlength="300" required>
+        <br>
+    </label>
+
+    <label>
+        Select priority:
+        <br>
+        <select name="priority" id="">
+            {{#each priority}}
+                <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+    </label>
+
+    <button type="submit">Add</button>
+
+</form>
