@@ -35,7 +35,6 @@ button:hover {
     border-color: red;
 }
 
-
 a {
     text-decoration: none;
 }
@@ -68,7 +67,6 @@ td {
 
 form, label, input, select, button {
     margin: 5px
-
 }
 
 label {

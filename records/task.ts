@@ -13,8 +13,9 @@ export class TaskRecord {
         const {id, task, status, priority} = obj;
 
         if (task.length < 3 || !task || task.length > 300) {
-            throw new ValidationError('Task should be at least 3 and at most 300 characters.')
+            throw new ValidationError('Task should be at least 3 and at most 300 characters.');
         }
+
 
         this.id = id;
         this.task = task;
@@ -24,8 +25,6 @@ export class TaskRecord {
 
     static async getAll(): Promise<TaskRecord[]> | null {
         const [results] = await pool.execute('SELECT * FROM `tasks`') as TaskRecordResults;
-        // console.log(results.map(obj => new TaskRecord(obj)))
-        // return results.length === 0 ? null : results
         return results.length === 0 ? null : results.map(obj => new TaskRecord(obj));
     };
 
@@ -33,15 +32,12 @@ export class TaskRecord {
         const [results] = await pool.execute('SELECT * FROM `tasks` WHERE `id` = :id', {
             id
         }) as TaskRecordResults;
-        console.log(results[0])
-        // console.log(new TaskRecord(results[0]))
-        // return results.length === 0 ? null : results
         return results.length === 0 ? null : new TaskRecord(results[0]);
     };
 
     async insert(): Promise<string> {
         if (!this.id) {
-            this.id = uuid()
+            this.id = uuid();
         }
         await pool.execute('INSERT INTO `tasks` (`id`, `task`,`status`, `priority`) VALUES (:id,:task,:status,:priority)', {
             id: this.id,

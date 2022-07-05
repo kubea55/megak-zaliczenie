@@ -27,5 +27,5 @@ app.use('/task', (taskRouter))
 
 
 app.listen(3000, 'localhost', () => {
-    console.log('listenig on: http://localhost:3000')
+    console.log('listening on: http://localhost:3000')
 });
