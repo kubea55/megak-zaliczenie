@@ -50,6 +50,7 @@ taskRouter
     .put('/update/:id', async (req, res) => {
         const taskId = req.params.id;
         const obj = req.body;
+        console.log(obj)
         const updatedTask = new TaskRecord({...obj, id: taskId});
         const id = await updatedTask.update();
         res.render('tasks/updated', {
