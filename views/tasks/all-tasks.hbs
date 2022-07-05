@@ -1,7 +1,4 @@
-all tasks
-<br>
-
-<button>
+<button class="add">
     <a href="task/add-form">Add Task</a>
 </button>
 <br>
@@ -33,12 +30,12 @@ all tasks
                 {{this.task.priority}}
             </td>
             <td>
-                <button><a href="/task/edit/{{this.task.id}}">Edit</a></button>
+                <button class="edit"><a href="/task/edit/{{this.task.id}}">Edit</a></button>
             </td>
             <td>
 
                 <form method='POST' action='/task/{{this.task.id}}?_method=DELETE'>
-                    <button type='submit'>Delete</button>
+                    <button class="delete" type='submit'>Delete</button>
                 </form>
 
             </td>
