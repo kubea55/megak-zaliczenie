@@ -3,14 +3,16 @@ you are editing task
 <br>
 
 <form method="POST" action="/task/update/{{task.id}}?_method=PUT">
-    Task name:
-    <br>
-    <input type="text"
-           name="task"
-           minlength="3"
-           maxlength="300"
-           required value="{{task.task}}">
-    <br>
+    <label for="">
+        Task name:
+        <br>
+        <input type="text"
+               name="task"
+               minlength="3"
+               maxlength="300"
+               required value="{{task.task}}">
+        <br>
+    </label>
     <label>
         Select priority:
         <br>
@@ -21,7 +23,7 @@ you are editing task
             {{/each}}
         </select>
     </label>
-
+    <br>
     <label>
         Select priority:
         <br>
@@ -37,3 +39,5 @@ you are editing task
     <button type="submit">Add</button>
 
 </form>
+
+{{> go-to-all-tasks}}

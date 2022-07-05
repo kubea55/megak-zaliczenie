@@ -1,4 +1,4 @@
-<h3>Add another task</h3>
+<h2>Add another task</h2>
 
 
 <form action="/task/add" method="post">
@@ -18,7 +18,10 @@
             {{/each}}
         </select>
     </label>
-
-    <button type="submit">Add</button>
+    <br>
+    <button type="submit">Add new task</button>
 
 </form>
+
+
+{{> go-to-all-tasks}}

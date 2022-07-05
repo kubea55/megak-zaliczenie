@@ -13,6 +13,10 @@ button {
     border-radius: 7px;
 }
 
+button:hover {
+    cursor: pointer;
+}
+
 .add {
     margin: 5px 30px;
 }
@@ -23,6 +27,7 @@ button {
 }
 
 .edit, .edit > a {
+    color: black;
     border-color: #fdc007;
 }
 
@@ -30,8 +35,8 @@ button {
     border-color: red;
 }
 
+
 a {
-    font-weight: normal;
     text-decoration: none;
 }
 
@@ -58,4 +63,22 @@ th {
 td {
     padding: 10px;
     border-bottom: #c9c9c9 solid 2px;
+}
+
+
+form, label, input, select, button {
+    margin: 5px
+
+}
+
+label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.back {
+    display: block;
+    margin: 25px 15px;
+    font-weight: bold;
+    color: #4dabab;
 }
