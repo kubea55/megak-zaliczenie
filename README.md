@@ -26,14 +26,16 @@ Project is created with:
 * typescript: 4.7.4
 	
 ## Setup
-To run this project, install it locally using npm:
-
-Let's start with installing all dependencies. Move to the app main workspace and run:
+To run this project, clone repository:
 ```
 git clone https://github.com/kubea55/megak-zaliczenie.git
 ```
+If you are not in "megak-zaliczenie" folder, type:
 ```
-npm init -y
+cd megak-zaliczenie
+```
+To install all dependecies:
+```
 npm i
 ```
 To create a localhost port you should type:
