@@ -33,7 +33,6 @@
                 <button class="edit"><a href="/task/edit/{{this.task.id}}">Edit</a></button>
             </td>
             <td>
-
                 <form method='POST' action='/task/{{this.task.id}}?_method=DELETE'>
                     <button class="delete" type='submit'>Delete</button>
                 </form>
@@ -41,7 +40,6 @@
             </td>
         </tr>
     {{/each}}
-
     </tbody>
 </table>
 

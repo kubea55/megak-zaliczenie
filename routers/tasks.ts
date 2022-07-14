@@ -25,10 +25,6 @@ taskRouter
         });
     })
 
-    // .get('/:id', (req, res) => {
-    //     res.render('tasks/one-task')
-    // })
-
     .get('/edit/:id', async (req, res) => {
         const id = req.params.id;
         const task = await TaskRecord.getOne(id);
@@ -50,7 +46,6 @@ taskRouter
     .put('/update/:id', async (req, res) => {
         const taskId = req.params.id;
         const obj = req.body;
-        console.log(obj)
         const updatedTask = new TaskRecord({...obj, id: taskId});
         const id = await updatedTask.update();
         res.render('tasks/updated', {

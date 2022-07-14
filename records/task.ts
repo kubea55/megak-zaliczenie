@@ -15,7 +15,12 @@ export class TaskRecord {
         if (task.length < 3 || !task || task.length > 300) {
             throw new ValidationError('Task should be at least 3 and at most 300 characters.');
         }
-
+        if (!["Low", "Medium", "High"].includes(priority)) {
+            throw new ValidationError('Task has invalid priority');
+        }
+        if (!["Todo", "In progress", "Completed"].includes(status)) {
+            throw new ValidationError('Task has invalid status');
+        }
 
         this.id = id;
         this.task = task;
