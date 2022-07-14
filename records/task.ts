@@ -18,9 +18,6 @@ export class TaskRecord {
         if (!["Low", "Medium", "High"].includes(priority)) {
             throw new ValidationError('Task has invalid priority');
         }
-        if (!["Todo", "In progress", "Completed"].includes(status)) {
-            throw new ValidationError('Task has invalid status');
-        }
 
         this.id = id;
         this.task = task;
