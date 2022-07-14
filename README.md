@@ -47,7 +47,6 @@ http://localhost:3000
 
 ## Photos
 
-
 ### Main view of all tasks:
 ![list all tasks screenshot](./app-photos/All.png)
 
