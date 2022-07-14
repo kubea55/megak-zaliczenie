@@ -45,7 +45,7 @@ Your Todo app is ready at port 3000.
 http://localhost:3000
 ```
 
-##Photos
+## Photos
 
 
 ### Main view of all tasks:
