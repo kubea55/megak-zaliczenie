@@ -1,0 +1,27 @@
+<h2>Add another task</h2>
+
+
+<form action="/task/add" method="post">
+    <label for="">
+        Task name:
+        <br>
+        <input type="text" name="task" minlength="3" maxlength="300" required>
+        <br>
+    </label>
+
+    <label>
+        Select priority:
+        <br>
+        <select name="priority" id="">
+            {{#each priority}}
+                <option value="{{this}}">{{this}}</option>
+            {{/each}}
+        </select>
+    </label>
+    <br>
+    <button type="submit">Add new task</button>
+
+</form>
+
+
+{{> go-to-all-tasks}}

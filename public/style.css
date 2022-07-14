@@ -1,0 +1,82 @@
+body {
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    padding: 5px;
+    background-color: white;
+    border: #c9c9c9 solid 2px;
+    border-radius: 7px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.add {
+    margin: 5px 30px;
+}
+
+.add, .add > a {
+    color: #0ec9ef;
+    border-color: #0ec9ef;
+}
+
+.edit, .edit > a {
+    color: black;
+    border-color: #fdc007;
+}
+
+.delete {
+    border-color: red;
+}
+
+a {
+    text-decoration: none;
+}
+
+table {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+    border-spacing: 0;
+}
+
+tr {
+    margin: 5px;
+}
+
+th, td {
+    margin: 0;
+}
+
+th {
+    padding: 1%;
+    border-bottom: black solid 2px;
+}
+
+td {
+    padding: 10px;
+    border-bottom: #c9c9c9 solid 2px;
+}
+
+
+form, label, input, select, button {
+    margin: 5px
+}
+
+label {
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+.back {
+    display: block;
+    margin: 25px 15px;
+    font-weight: bold;
+    color: #4dabab;
+}

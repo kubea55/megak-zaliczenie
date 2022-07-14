@@ -4,7 +4,8 @@ import 'express-async-errors';
 import * as methodOverride from 'method-override';
 import {engine} from 'express-handlebars';
 import {handleError} from "./utils/error";
-import {mainRouter} from "./routers/main";
+import {taskRouter} from './routers/tasks';
+import {mainRouter} from './routers/main';
 
 const app = express();
 
@@ -17,12 +18,10 @@ app.engine('.hbs', engine({
     extname: '.hbs',
 }));
 app.set('view engine', '.hbs');
-
 app.use(handleError);
-
 app.use('/', (mainRouter))
-
+app.use('/task', (taskRouter))
 
 app.listen(3000, 'localhost', () => {
-    console.log('listenig on: http://localhost:3000')
+    console.log('Listening on: http://localhost:3000')
 });

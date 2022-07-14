@@ -1,1 +1,45 @@
-all tasks
+<button class="add">
+    <a href="task/add-form">Add Task</a>
+</button>
+<br>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Task name</th>
+        <th>Status</th>
+        <th>Priority</th>
+        <th>Edit</th>
+        <th>Remove</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {{#each tasks}}
+        <tr>
+            <td>
+                {{this.numeral}}
+            </td>
+            <td>
+                {{this.task.task}}
+            </td>
+            <td>
+                {{this.task.status}}
+            </td>
+            <td>
+                {{this.task.priority}}
+            </td>
+            <td>
+                <button class="edit"><a href="/task/edit/{{this.task.id}}">Edit</a></button>
+            </td>
+            <td>
+                <form method='POST' action='/task/{{this.task.id}}?_method=DELETE'>
+                    <button class="delete" type='submit'>Delete</button>
+                </form>
+
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+
