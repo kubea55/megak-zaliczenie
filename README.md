@@ -6,6 +6,7 @@ Simple todo application
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Setup](#setup)
+* [Photos](#photos)
 
 ## General info
 Application for everyday use, you can:
@@ -44,15 +45,18 @@ Your Todo app is ready at port 3000.
 http://localhost:3000
 ```
 
-### Main view of all tasks.
+##Photos
+
+
+### Main view of all tasks:
 ![list all tasks screenshot](./app-photos/All.png)
 
-### View when you want to edit task.
+### View when you want to edit task:
 ![edit task screenshot](./app-photos/Edit.png)
 
-### View when you want to add new task.
+### View when you want to add new task:
 ![add task screenshot](./app-photos/Add.png)
 
-### View when you added task.
+### View when you added task:
 ![added task screenshot](./app-photos/Added.png)
 
