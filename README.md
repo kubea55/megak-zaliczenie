@@ -44,8 +44,15 @@ Your Todo app is ready at port 3000.
 http://localhost:3000
 ```
 
+### Main view of all tasks.
+![list all tasks screenshot](./app-photos/All.png)
 
-![list all tasks screenshot](./app-photos/All.png).
-![added task screenshot](./app-photos/Added.png).
-![add task screenshot](./app-photos/Add.png).
-![edit task screenshot](./app-photos/Edit.png).
+### View when you want to edit task.
+![edit task screenshot](./app-photos/Edit.png)
+
+### View when you want to add new task.
+![add task screenshot](./app-photos/Add.png)
+
+### View when you added task.
+![added task screenshot](./app-photos/Added.png)
+
